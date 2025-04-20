@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Введение данных</title>
+</head>
+<body>
+<h1>Введите данные и нажмите кнопку "Ввод": </h1>
+<form th:action="@{/homepage/newdata}" th:object="${input}" method="post">
+  <label for="input">Поле 1:</label>
+  <input type="text" id="input" th:field="*{input}" required />
+  <br />
+  <!--<label for="input2">Поле 2:</label>
+  <input type="text" id="input2" th:field="*{input2}" required />
+  <br />-->
+  <button type="submit">Отправить</button>
+
+</form>
+</body>
+</html>
